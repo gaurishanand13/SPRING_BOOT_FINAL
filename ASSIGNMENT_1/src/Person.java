@@ -2,9 +2,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-/**
- * Submit URL - https://docs.google.com/forms/d/e/1FAIpQLSfe7Od6Mr2f3MWwOmL5SmwldVlRgQU9dgJcPxm7Ef7trYn0oA/viewform?usp=pp_url
- */
+
 public class Person {
 
     private int age;

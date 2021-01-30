@@ -1,3 +1,5 @@
+package tryCatch;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -68,7 +70,7 @@ public class tryCatch {
 
 //        Output for above try/catch when tryWithResources function is executed, here catch of main function will not be executed as no throw statement in this function.
         /**
-         * tryWithResourceHelper@776ec8df
+         * tryCatch.tryWithResourceHelper@776ec8df
          * Making object null here!!
          */
 

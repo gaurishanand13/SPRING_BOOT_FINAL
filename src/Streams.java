@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 /**
  * There are 4 types of terminal functions - forEach, collect , reduce
  */
-public class FunctionProgramming {
+public class Streams {
 
     public static void main(String[] args) {
 
@@ -63,7 +63,7 @@ public class FunctionProgramming {
         System.out.println("");
         List<String> countries = Arrays.asList("Ind", "NZ", "Aus", "SA", "WI", "SL", "Pak", "Afg", "Austria", "USA");
         // Ques -  return the first country starting with A
-        countries.stream().filter(x -> FunctionProgramming.filterMyCountry(x)).findFirst();
+        countries.stream().filter(x -> Streams.filterMyCountry(x)).findFirst();
         // Output for this stream is -
         /**
          * Filtering for country :Ind

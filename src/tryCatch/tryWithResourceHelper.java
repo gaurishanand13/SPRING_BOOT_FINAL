@@ -1,3 +1,5 @@
+package tryCatch;
+
 /**
  * If a class has its parent class as autoclosable, then it will be useful when we declare the objects of this class in try with resouce parameter.
  * Whenever the try/catch function ends where its object was declared in the prototype, always the close function for that object will be called.
