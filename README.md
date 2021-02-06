@@ -23,6 +23,9 @@ JFROG - Best website to make our remote repo for our SPRING PROJECTS
 <br>
 Frameworks used to develop web application using java - Spring Boot / Spring
 <br> 
-Difference b/w spring boot and spring - Spring Boot has inbuilt webserver of tomcat but spring doesn't have it. In spring, we have to specifically mention which server we want to use unlike spring boot. So Spring boot somewhat makes our tasks easy of setting up the inbuilt server. Though we can even change the inbuilt server of spring boot too.
+Difference b/w spring boot and spring - Spring Boot has inbuilt webserver of tomcat but spring doesn't have it. In spring, we have to specifically mention which server we want to use unlike spring boot. So Spring boot somewhat makes our tasks easy of setting up the inbuilt server. Though we can even change the inbuilt server of spring boot too. There are also many dependencies which are present by default.
+
+<br>
+Server is hardware machine.
 
 
