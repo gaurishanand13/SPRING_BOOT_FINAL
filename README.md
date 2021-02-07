@@ -33,13 +33,21 @@ spring boot starter web - used to download
 <br>
 There are 2 types of apis - Restful apis and Stateful api
 <br>
+<br>
 Inversion Of Control - It means spring makes the object of a class on its own if we mention it, i.e we don't handle the object lifecycle on our own, spring boot handles it. Eg - in the case of rest controller for a class. 
+<br>
 <br>
 Note - Spring will create objects of those classes which are having @component annotation over it directly or indirectly.
 Indirectly means like here @RestController doesn't have @component over it, but in turn it inherits @component.
 <br>
+<br>
 Note - An object of a class created by spring on its own is called as bean.
 <br>
-Dispatcher Sovelet - These are the parts which are continously running inside the jetty/tomcat server and listens for the request and whenever it comes, it directs it to required function.
+<br>
+Dispatcher Sovelet - These are the parts which are continously running inside the jetty/tomcat server and listens for the request and whenever it comes, it directs it to required function. Therefore it is just a low level class which continuously runs and listens for request.
+
+<br>
+<br>
+Dependency Injection - Since we know using @component with some class, spring creates an object of that class automatically. Therefore if we want to use the function of such a bean created by spring, then we can use @Autowired annotation and get access to the object(bean) which was created by the spring.
 
 
