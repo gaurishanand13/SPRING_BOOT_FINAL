@@ -27,5 +27,10 @@ Difference b/w spring boot and spring - Spring Boot has inbuilt webserver of tom
 
 <br>
 Server is hardware machine.
+<br>
+spring boot starter web - used to download
+
+<br>
+There are 2 types of apis - Restful apis and Stateful api
 
 
