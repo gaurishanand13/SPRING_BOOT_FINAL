@@ -51,3 +51,7 @@ Dispatcher Sovelet - These are the parts which are continously running inside th
 Dependency Injection - Since we know using @component with some class, spring creates an object of that class automatically. Therefore if we want to use the function of such a bean created by spring, then we can use @Autowired annotation and get access to the object(bean) which was created by the spring.
 
 
+<br>
+<br>
+@Scope - using it we can mention the scope of an object created by spring. Eg- @scope("prototyping") will not make the class sigleton, spring will create the object as and when it is used and required.
+
