@@ -1,18 +1,6 @@
 # SPRING-BOOT
 
-1)	First Download Intellij Idea (Community Edition). Open this you have to install some java jdk too then.
-2)	After that install maven in your mac by running the command – 
-```
-brew install maven
-mvn -version
-```
-
-
-1) For streams, watch this video - https://www.youtube.com/watch?v=1OpAgZvYXLQ
-2) For parallel streams and asynchronous programming - https://www.youtube.com/watch?v=0hQvWIdwnw4
-
-
-SPRING BOOT - https://github.com/piyush5807/JBDL-11
+SPRING BOOT GFG REPO - https://github.com/piyush5807/JBDL-11
 <br>
 SPRING PROJECT INITIALIZER - https://start.spring.io/
 <br>
@@ -20,6 +8,32 @@ SITE TO SEARCH FOR DEPENDENCY - https://mvnrepository.com/
 <br>
 JFROG - Best website to make our remote repo for our SPRING PROJECTS
 <br>
+
+## STARTING WITH SPRING-BOOT
+
+1)	First Download Intellij Idea (Community Edition). Open this you have to install some java jdk too then.
+2)	After that install maven in your mac by running the command – 
+```
+brew install maven
+mvn -version
+```
+### We also need to install sql and mongodb to use them in our project
+1) First install homebrew for mac from https://brew.sh/ , Basically run this command - 
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+2) Then install mysql and start mysql service - 
+```
+brew install mysql
+brew services start mysql
+```
+
+<br>
+1) For streams, watch this video - https://www.youtube.com/watch?v=1OpAgZvYXLQ
+2) For parallel streams and asynchronous programming - https://www.youtube.com/watch?v=0hQvWIdwnw4
+
+
+
 <br>
 Frameworks used to develop web application using java - Spring Boot / Spring
 <br> 
