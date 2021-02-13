@@ -27,6 +27,22 @@ mvn -version
 brew install mysql
 brew services start mysql
 ```
+3) Here are the ways to start and stop SQL in terminal
+```
+mysql.server start
+mysql.server stop
+```
+
+4) Now you can connect to the server using the command - 
+mysql -u root -p
+You will need to type the root user password after you run this command (Initially password is empty string, so just ENTER)
+
+5)	If you want to change the root user password, perform these tasks – 
+mysqladmin -u root password gaurish13
+Now password is changed to ‘gaurish13'
+
+6) Creating database, user and granting db access to user - 
+
 
 <br>
 1) For streams, watch this video - https://www.youtube.com/watch?v=1OpAgZvYXLQ
