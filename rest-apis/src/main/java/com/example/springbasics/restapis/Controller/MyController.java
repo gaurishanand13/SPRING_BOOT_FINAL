@@ -17,7 +17,6 @@ public class MyController {
      * PUT - updating something on server ===> PUTMAPPING
      * DELETE - deleting something from server ====> DELETEMAPPING
      */
-
     private HashMap<Integer, Person> users = new HashMap<>();
 
     @GetMapping("/getUsers")
@@ -65,7 +64,7 @@ public class MyController {
     }
 
     @RequestMapping(value = "/insertUserTwo",method = RequestMethod.POST ,consumes = { MediaType.APPLICATION_FORM_URLENCODED_VALUE})
-    public void insertUserTwo(@RequestBody Person person){
+    public void insertUserTwo(Person person){
         users.put(person.getId(),person);
     }
 

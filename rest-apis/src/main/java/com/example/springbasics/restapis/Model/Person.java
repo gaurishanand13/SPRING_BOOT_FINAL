@@ -1,5 +1,9 @@
 package com.example.springbasics.restapis.Model;
 
+import org.springframework.stereotype.Component;
+
+// Adding @Component adding to it, a bean of this class will be created by spring on its own automatically.
+@Component
 public class Person {
     int id;
     private int age;
