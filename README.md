@@ -6,6 +6,7 @@
 brew install maven
 mvn -version
 ```
+Or we can install maven manually using https://mkyong.com/maven/install-maven-on-mac-osx/
 
 
 1) For streams, watch this video - https://www.youtube.com/watch?v=1OpAgZvYXLQ
