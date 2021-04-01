@@ -52,10 +52,10 @@ public class CompletableFutureExecution {
 
         }
 
-
         completableFutureList.stream().forEach(x -> {
             try {
-                x.get();
+                x.get(); // if we don't write this, then completableFuture will not start executing. When we write this the work of this thread starts and whenever
+                // it gets passed to thenApply / thenAccept functions of the futureObject and then that part is executed for that future object.
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } catch (ExecutionException e) {
@@ -65,7 +65,7 @@ public class CompletableFutureExecution {
 
         System.out.println("Ending here!!");
         System.out.println(System.currentTimeMillis() - start);
-        // Clearly we can see in output that ending here and timeMillis gets executed even before all the thread gets executed, hence
+        // Clearly we can see in output that "ending here" and timeMillis gets executed even before all the thread gets executed, hence
         //main thread is not blocked and we are able to do tasks parallely.
         /**
          * the result of ele 10000 is in x
@@ -119,7 +119,5 @@ public class CompletableFutureExecution {
          * the result of ele 90000 is in x
          * Printed the result finally for ele 90000
          */
-
-
     }
 }

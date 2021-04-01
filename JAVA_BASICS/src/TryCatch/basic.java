@@ -45,7 +45,7 @@ public class basic {
             //otherwise we have to specifically mention it.
             helper.setName("ABC");
             helper.setId(3);
-            int ans = 10 / 0;
+            // int ans = 10 / 0;
         }catch (Exception e){
             System.out.print("In the catch block");
             e.printStackTrace();

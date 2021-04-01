@@ -6,7 +6,8 @@ import java.util.List;
 public class ParallelStreams {
 
     /**
-     * Note in parallel streams, work happens in different threads, so we can also use parallel streams to do work in different threads and get our work executed faster.
+     * Note in parallel streams, work happens in different threads, so we can also use parallel streams to do work in different threads and
+     * get our work executed faster.
      */
     public static void parallelStreams(){
         List<Integer> numbers = Arrays.asList(1,1,5, 4, 2, 3, 6, 5, 8, 10, 9, 2);
