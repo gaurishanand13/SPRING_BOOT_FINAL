@@ -13,7 +13,7 @@ Or we can install maven manually using https://mkyong.com/maven/install-maven-on
 2) For parallel streams and asynchronous programming - https://www.youtube.com/watch?v=0hQvWIdwnw4
 
 
-SPRING BOOT - https://github.com/piyush5807/JBDL-11
+SPRING BOOT GFG REPO - https://github.com/piyush5807/JBDL-11
 <br>
 SPRING PROJECT INITIALIZER - https://start.spring.io/
 <br>
@@ -21,20 +21,47 @@ SITE TO SEARCH FOR DEPENDENCY - https://mvnrepository.com/
 <br>
 JFROG - Best website to make our remote repo for our SPRING PROJECTS
 <br>
+
+
 <br>
 Frameworks used to develop web application using java - Spring Boot / Spring
 <br> 
 Difference b/w spring boot and spring - Spring Boot has inbuilt webserver of tomcat but spring doesn't have it. In spring, we have to specifically mention which server we want to use unlike spring boot. So Spring boot somewhat makes our tasks easy of setting up the inbuilt server. Though we can even change the inbuilt server of spring boot too. There are also many dependencies which are present by default.
 
-<br>
-Server is hardware machine.
-<br>
-spring boot starter web - used to download
 
 <br>
-There are 2 types of apis - Restful apis and Stateful api
+Note - Server is a hardware machine.
+<br>
+spring boot starter web - used to download initial spring boot dependencies.
+
+
 <br>
 <br>
+There are 2 types of apis - Restful (Stateless) apis and Stateful api
+
+### Stateful Api - 
+<img width="1381" alt="Screenshot 2021-04-02 at 1 29 32 PM" src="https://user-images.githubusercontent.com/43893611/113439680-a8f1cc00-9408-11eb-9850-7c5074699fb7.jpeg">
+<img width="1381" alt="Screenshot 2021-04-02 at 1 29 32 PM" src="https://user-images.githubusercontent.com/43893611/113439700-b444f780-9408-11eb-9931-33b335b5d308.png">
+<br>
+STATEFUL SERVERS – In this state is maintained in the server, instead of maintaining it in the database. 
+Example- A particular website can have multiple servers to handle large number of clients (there can be multiple levels of databases too). When a user logins, load balancer assigns one of the server to that client.
+Therefore when user makes a login request,  LB assigns one of the server to that client, then server will make a request to the database to check if this username/password is valid or not. Once it checks that this is valid, then it sends back the token to the server. This token is saved in servers memory in case of stateful servers and then server sends back the token to the client.
+Now consider a case after login  User makes some other request (example to view profile/products) , then it will have to pass token along with it. LB will direct it to the server where its token details are stored. Sever will confirm if this token exists or not in it and depending on it, it will give the output. 
+But this will fail like for some clients, token is stored in server 1 and if that server1 fails. Then load balancer (LB) will redirect it to some other server like server2. Since there token of these clients is not stored, they have to login again. 
+<br>
+
+### Stateless Api - 
+<br>
+<img width="1384" alt="Screenshot 2021-04-02 at 1 30 30 PM" src="https://user-images.githubusercontent.com/43893611/113439719-bad36f00-9408-11eb-99c9-b6ead6ad48d5.png">
+<br>
+But this can’t happen in the case of Stateless Servers as these servers store token in database instead of severs. So whenever a client makes a request to the server, server in turn makes a request to db to check whether this token is valid or not and gets the required output from db. Therefore even if server1 fails, LB will redirect them to server2 and server 2 will in turn make a request to db to check if this token is valid or not. Therefore in this case even if some server fails, client will have a smooth functioning and they would not have to login again and again. 
+Though stateless servers are slower as compared to stateful servers as they would have to everytime make a request to db to check if this token is valid or not as they are not maintaining client state within the servers. 
+But for a large scale applications stateless servers are more reliable and scalable.
+
+<br>
+
+
+
 Inversion Of Control - It means spring makes the object of a class on its own if we mention it, i.e we don't handle the object lifecycle on our own, spring boot handles it. Eg - in the case of rest controller for a class. 
 <br>
 <br>
@@ -42,11 +69,10 @@ Note - Spring will create objects of those classes which are having @component a
 Indirectly means like here @RestController doesn't have @component over it, but in turn it inherits @component.
 <br>
 <br>
-Note - An object of a class created by spring on its own is called as bean.
+Note - An object of a class created by spring on its own (i.e Inversion of control) is called as bean.
 <br>
 <br>
 Dispatcher Sovelet - These are the parts which are continously running inside the jetty/tomcat server and listens for the request and whenever it comes, it directs it to required function. Therefore it is just a low level class which continuously runs and listens for request.
-
 <br>
 <br>
 Dependency Injection - Since we know using @component with some class, spring creates an object of that class automatically. Therefore if we want to use the function of such a bean created by spring, then we can use @Autowired annotation and get access to the object(bean) which was created by the spring.
@@ -62,3 +88,27 @@ IOC container / Application context - bean created by spring is put into IOC con
 <br>
 <br>
 Check pictures of logging on phone picture
+
+
+<br>
+<br>
+PERSISTEN DATABASES - to perform CRUD(CREATE READ UPDATE AND DELETE) operations first we will learn to do with SQL. 
+<br>
+For SQL project - dependencies used are spring web / my sql driver.
+Initializing SQL 
+/usr/local/mysql/bin/mysql -uroot -p
+password - gaurish13
+CREATE DATABASE spring_boot_db;
+CREATE USER gaurish_anand_user IDENTIFIED BY 'mypass';
+USE spring_boot_db;
+GRANT ALL PRIVILEGES ON spring_boot_db.*TO gaurish_anand_user;
+<br>
+<br>
+<br>
+
+### HIBERNATE VS JPA - 
+
+A JPA (Java Persistence API) is a dependency of Java which is used to access, manage, and persist data between Java object and relational database. JPA doesn't perform any operation by itself. Thus, it requires implementation. So, ORM tools like Hibernate, TopLink, and iBatis implements JPA specifications for data persistence. In Spring Boot, JPA is internally using hiberante to manage our relational database.
+<br>
+<br>
+A Hibernate is a Java framework which is used to store the Java objects in the relational database system. It is an open-source, lightweight, ORM (Object Relational Mapping) tool. 
