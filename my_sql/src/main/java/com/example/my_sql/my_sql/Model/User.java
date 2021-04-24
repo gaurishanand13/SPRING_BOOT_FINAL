@@ -1,4 +1,4 @@
-package com.example.my_sql.my_sql;
+package com.example.my_sql.my_sql.Model;
 
 public class User {
     private int id;
@@ -7,12 +7,11 @@ public class User {
     private int age;
     private String state;
 
-    public User(int id, String name, String country, int age, String state) {
+    public User(int id, String name, String country, int age) {
         this.id = id;
         this.name = name;
         this.country = country;
         this.age = age;
-        this.state = state;
     }
 
     public int getId() {
