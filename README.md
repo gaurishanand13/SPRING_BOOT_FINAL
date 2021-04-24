@@ -113,4 +113,8 @@ A JPA (Java Persistence API) is a dependency of Java which is used to access, ma
 So, ORM tools like Hibernate, TopLink, and iBatis implements JPA specifications for data persistence. 
 <br>
 <br>
+Therefore 3 dependencies used in hibernate are - 
+1. SPRING WEB
+2. MY SQL DRIVER
+3. SPRING DATA JPA
 
