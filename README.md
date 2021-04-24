@@ -107,8 +107,10 @@ GRANT ALL PRIVILEGES ON spring_boot_db.*TO gaurish_anand_user;
 <br>
 
 ### HIBERNATE VS JPA - 
+A Hibernate is a Java framework which is used to store the Java objects in the relational database system. It is an open-source, lightweight, ORM (Object Relational Mapping) tool. Basically ek framework jo hume itni lambi queries for create / update / delete, etc likhne se bacha lega. It handles these thing on its own.
 
-A JPA (Java Persistence API) is a dependency of Java which is used to access, manage, and persist data between Java object and relational database. JPA doesn't perform any operation by itself. Thus, it requires implementation. So, ORM tools like Hibernate, TopLink, and iBatis implements JPA specifications for data persistence. In Spring Boot, JPA is internally using hiberante to manage our relational database.
+A JPA (Java Persistence API) is a dependency of Java which is used to access, manage, and persist data between Java object and relational database. In Spring Boot, JPA is internally using hiberante by default to manage our relational database. 
+So, ORM tools like Hibernate, TopLink, and iBatis implements JPA specifications for data persistence. 
 <br>
 <br>
-A Hibernate is a Java framework which is used to store the Java objects in the relational database system. It is an open-source, lightweight, ORM (Object Relational Mapping) tool. 
+
