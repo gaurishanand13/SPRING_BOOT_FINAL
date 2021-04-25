@@ -12,6 +12,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+// There is no difference even if we use @Component here -> Both will serve the same purpose. But generally if we are peforming some business logic in a class
+// we should use @Service for better readibility.
 @Service
 public class UserService {
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
