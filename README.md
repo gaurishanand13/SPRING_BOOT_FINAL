@@ -148,3 +148,16 @@ While using JPA we usually set up the DUAL relationship (i.e Foreign key present
 So note the table which has the foreign key (i.e child table) will use @JoinColumn annotation in child table and parentTable will also map it using mappedBy field in OneToOne annotation. Now here comes 2 things - 
 1. OneToOne - Parent Table will be linked to single object of student and vice-verca is also true
 2. OneToMany - Parent Object can be linked to a List Of Child Objects but child object will be linked to only one.
+
+### Basic points about JPA Cascade Types
+The cascade is an optional element defined in @OneToOne, OneToMany, @ManyToOne and @ManyToMany annotations. The main purpose of using JPA Cascade Types is we can perform save or delete for Parent entity then child entity will also be saved or deleted.
+
+### Basic points about JPA Fetch Types
+Now we know like in oneToMany relation, one object can be linked to many children objects. Therefore everytime we do 
+```
+SELECT * FROM parentTable
+```
+It will fetch all the children objects also of the parentObject. But we may not require these children objects. Maybe we were working on just other properities.
+Then in that case too we will be spending a lot of time in fetching all the children. It can make the server slow if we have large data. Therefore what we do is
+if we are fetching whole ParentObject , we set FETCH_TYPE = LAZY i.e it won't fetch child objects unless and until we fetch them particulary using their getter of that property. 
+But if we want that all the child objects should also be fetched when we are fetching the parentObject, then set FETCH TYPE = EAGER. By default fetch type is eager only i.e all child objects would be fetched.
