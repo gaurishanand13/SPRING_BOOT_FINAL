@@ -142,12 +142,16 @@ Some of the annotations provided by lombok is -
 <br>
 <br>
 
+
 ### SOME FACTS OF JPA (mySQL ORM)
 While using JPA we usually set up the DUAL relationship (i.e Foreign key present in some table which is Primary key of another table)
 
 So note the table which has the foreign key (i.e child table) will use @JoinColumn annotation in child table and parentTable will also map it using mappedBy field in OneToOne annotation. Now here comes 2 things - 
 1. OneToOne - Parent Table will be linked to single object of student and vice-verca is also true
 2. OneToMany - Parent Object can be linked to a List Of Child Objects but child object will be linked to only one.
+
+### Note 2
+Though we get some basic inbuilt SQL queries by default (i.e save , getAll(),etc). But if we want to create advance select/update queries, then that we would have to write on our own.
 
 ### Basic points about JPA Cascade Types
 The cascade is an optional element defined in @OneToOne, OneToMany, @ManyToOne and @ManyToMany annotations. The main purpose of using JPA Cascade Types is we can perform save or delete for Parent entity then child entity will also be saved or deleted.
