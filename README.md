@@ -130,6 +130,13 @@ Instead of making getters and setters for each class in spring boot, we have a d
 	<artifactId>lombok</artifactId>
 </dependency>
 ```
+Some of the annotations provided by lombok is - 
+1. @Getter - This provide getters for all fields.
+2. @Setter - This provide setters for all fields.
+3. @Builder - It is used to build a object without using getters and setters like this - student.builder().name("gaurish").id(1).build();
+4. @NoArgsConstructor - provides default constructor
+5. @AllArgsConstructor - provides all arugment constructor
+6. @ToString - It provides the printing of all arguments of an object by default
 
 <br>
 <br>
