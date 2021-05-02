@@ -122,6 +122,17 @@ Therefore 3 dependencies used in hibernate are -
 <br>
 <br>
 
+### Note - 
+Instead of making getters and setters for each class in spring boot, we have a dependency named 'lombok' for getters and setters where we can just user @Getters / @Setters dependency to get and set. Code is -
+<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+</dependency>
+
+<br>
+<br>
+<br>
+
 ### SOME FACTS OF JPA (mySQL ORM)
 While using JPA we usually set up the DUAL relationship (i.e Foreign key present in some table which is Primary key of another table)
 
