@@ -124,10 +124,12 @@ Therefore 3 dependencies used in hibernate are -
 
 ### Note - 
 Instead of making getters and setters for each class in spring boot, we have a dependency named 'lombok' for getters and setters where we can just user @Getters / @Setters dependency to get and set. Code is -
+```
 <dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
+	<groupId>org.projectlombok</groupId>
+	<artifactId>lombok</artifactId>
 </dependency>
+```
 
 <br>
 <br>
