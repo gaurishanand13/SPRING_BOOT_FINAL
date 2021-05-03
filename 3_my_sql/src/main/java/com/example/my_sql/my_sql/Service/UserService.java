@@ -19,9 +19,15 @@ public class UserService {
     private static Logger logger = LoggerFactory.getLogger(UserService.class);
     DbOperations connection;
 
-    // It is known as Constructor dependency injection i.e though we have not declared object of this DbOperations and not even passed to this constructor
-    // But when it comes to this line, spring boot will notice that since DbOperations is a bean. It will first create the bean of that class if already not created
-    // and pass that bean here to this constructor. In this way, we were not required to create our own bean.
+    /**
+     *  It is known as Constructor dependency injection i.e though we have not declared object of this DbOperations and not even passed to this constructor
+     *  But when it comes to this line, spring boot will notice that since DbOperations is a bean. It will first create the bean of that class if already
+     *  not created and pass that bean here to this constructor. In this way, we were not required to create our own bean.
+     *
+     *  Note if we would have decleared an object of DbOperations directly using @Autowired (i.e trying to allocate bean) --> Then that would be an error as
+     *  it may happen that bean of that class is not formed till now. Then in that case error will be thrown instead of making that bean. If bean already not made
+     *  it will be made only if it is present in the constructor class of another bean class and not as an object of that class.
+     */
     public UserService(DbOperations operations,@Value("${test.my_prop}") String my_prop){
         this.connection = operations;
 
