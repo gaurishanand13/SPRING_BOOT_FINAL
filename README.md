@@ -188,3 +188,21 @@ NoSQL is better than mySQL when it comes to speed, but it is less Efficient in t
 }
 ```
 But this will take a lot of memory as for same author we would be repeating the author block again and again. Though noSQL db is generally preferred in companies as compared to relational db.
+
+### Note 
+We can use mongodb on local server by downloading mongodb but here we would be using mongodb on a cloud server (atrlas server - mongodb) - https://account.mongodb.com/account/login?n=%2Fv2%2F5fa469608778717d27835df2#clusters
+1. First created an user using database access. username - gaurishanand13 , password - perfectgirls.net
+2. Then created a new cluster (in my language - created a new db) and first we will try to learn it on mongoShell (connect --> connect to mongoshell)
+3. connect --> connect To Application to connect it with your application.
+4. ADD SS here
+5. Dependencies used in my project - springWeb , Spring Data MongoDb
+6. now here comes 2 dependencies - 
+	a. Spring Data Reactive MongoDB - It perfoms each operation on a seperate thread and we don't need to wait for it to fetch another result.
+	b. Spring Data MongoDb - Here it performs on single thread only so we have to wait for result each time a request is made to mongodb.
+
+### NOTE - NGROK
+Ngrok routes any local application to a ngrok url so that anyone outside can also use. To do that run this command on your terminal where ngrok is installed - 
+```
+./ngrok http 8080
+```
+where 8080 is the port on which your application is running
