@@ -165,3 +165,26 @@ It will fetch all the children objects also of the parentObject. But we may not 
 Then in that case too we will be spending a lot of time in fetching all the children. It can make the server slow if we have large data. Therefore what we do is
 if we are fetching whole ParentObject , we set FETCH_TYPE = LAZY i.e it won't fetch child objects unless and until we fetch them particulary using their getter of that property. 
 But if we want that all the child objects should also be fetched when we are fetching the parentObject, then set FETCH TYPE = EAGER. By default fetch type is eager only i.e all child objects would be fetched.
+
+<br>
+<br>
+<br>
+
+### NoSQL vs MySQL
+NoSQL is better than mySQL when it comes to speed, but it is less Efficient in terms of space. For example in our project we have to perform join operations in book_table and author table to find the author of a particular book. Join operations generally takes more time in getting executed. If we store the books in this format --> Then we won't have to perform join operations 
+```
+{
+        "id": 2,
+        "name": "physics",
+        "available": false,
+        "genre": "PHYSICS",
+        "author": {
+            "id": 1,
+            "name": "william",
+            "email": "william@gmail.com",
+            "age": 66,
+            "country": "Australia"
+        }
+}
+```
+But this will take a lot of memory as for same author we would be repeating the author block again and again. Though noSQL db is generally preferred in companies as compared to relational db.
